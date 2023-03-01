@@ -1,0 +1,33 @@
+.converterWrapper {
+  border: 2px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  padding: 40px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.converterTitle{
+  margin-bottom: 20px;
+}
+
+.arrowIcon {
+  display: block;
+  padding: 10px;
+  font-size: 1rem;
+  transform: rotate(90deg);
+}
+
+.inputsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 60%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.converter {
+  max-width: 130px;
+  width: 100%;
+}

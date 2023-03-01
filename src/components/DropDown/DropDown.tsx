@@ -3,21 +3,30 @@ import { currencies } from '../constants/currencies';
 import './DropDown.css'
 
 interface Props {
-  label: string;
+  name: string;
+  value: string,
   currencies: typeof currencies;
-  onChange?(): void;
+  label?: string;
+  onChange(): void;
 }
 
 export const DropDown: FC<Props> = ({
-  label,
+  name,
+  value,
   currencies,
-  onChange = () => {}
+  label = "",
+  onChange
 }): ReactElement => {
 
   return (
     <label className='dropDownWrapper'>
       <span className='dropDownLabel'>{label}</span>
-      <select className='dropDown'>
+      <select 
+        className='dropDown'
+        name={name}
+        value={value}
+        onChange={onChange}
+      >
         {currencies.map((currency) => (
           <option key={currency} value={currency}>
             {currency}

@@ -4,6 +4,7 @@
 }
 
 .dropDown {
-  padding: 16px 50px 16px 16px;
+  padding: 12px 50px 12px 12px;
   cursor: pointer;
+  width: 100%;
 }

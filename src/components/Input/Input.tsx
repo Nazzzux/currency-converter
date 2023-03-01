@@ -1,19 +1,27 @@
-import React, { FC, ReactElement } from 'react'
+import React, { ChangeEvent, FC, ReactElement } from 'react'
+import './Input.css'
 
 interface Props {
-  label: string;
-  placeholder: string;
   name: string;
   value: string;
+  label?: string;
   type?: string;
-  onChange() : void
+  placeholder?: string;
+  onChange(event: ChangeEvent<HTMLInputElement>) : void
 }
 
-export const Input: FC<Props> = ({ label, placeholder, type = "text", name, value, onChange }): ReactElement => {
+export const Input: FC<Props> = ({ 
+  label, 
+  name, 
+  value, 
+  placeholder = "", 
+  type = "text", 
+  onChange }): ReactElement => {
   return (
-    <label className='inputLabel'>
-      {label}
+    <label className='inputLabelWrapper'>
+      <span className='inputLabel'>{label}</span>
       <input 
+        className='input'
         name={name}
         placeholder={placeholder}
         type={type}

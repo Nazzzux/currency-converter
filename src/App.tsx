@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { FC, ReactElement } from 'react'
 import './App.css';
 import { Converter } from './components/Converter/Converter';
 
-export const App = () => {
-  return (
-    <div>
-      <Converter />
-    </div>
-  )
-}
+export const App: FC = (): ReactElement => (
+  <div>
+    <Converter />
+  </div>
+)
